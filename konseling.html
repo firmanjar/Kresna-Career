@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bimbingan Konseling Karir Kampus | Jadwal Konseling</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#eab308",
+              secondary: "#15803d",
+              accent: "#f97316",
+              dark: "#1d4ed8",
+              light: "#ffffff",
+              third: "#f9fafb",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-black bg-opacity-80 shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 flex items-center">
+              <i class="fas fa-graduation-cap text-2xl text-accent mr-2"></i>
+              <span class="text-xl font-bold text-light">Kresna</span
+              ><span class="text-xl font-bold text-accent">Career</span>
+            </div>
+          </div>
+          <div class="hidden md:flex items-center space-x-2">
+             <a
+              href="dashboard.html"
+              class="text-light hover:bg-accent px-3 py-2 font-medium"
+              >Dashboard</a
+            >
+             <a
+              href="tes.html"
+              class="text-light hover:bg-accent px-3 py-2 font-medium"
+              >Tes minat</a
+            >
+             <a
+              href="index.html"
+              class="text-light hover:bg-accent px-3 py-2 font-medium"
+              >Logout</a
+            >
+          </div>
+          <div class="flex items-center md:hidden">
+            <button
+              class="mobile-menu-button p-2 rounded-md text-light hover:text-accent focus:outline-none">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="mobile-menu hidden md:hidden bg-light shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="dashboard.html"
+            class="block px-3 py-2 text-black hover:text-accent font-medium"
+            >Dashboard</a
+          >
+          <a
+            href="tes.html"
+            class="block px-3 py-2 text-black hover:text-accent font-medium"
+            >Tes minat</a
+          >
+          <a
+            href="konseling.html"
+            class="block px-3 py-2 text-black hover:text-accent font-medium"
+            >Konseling</a
+          >
+          <a
+            href="login.html"
+            class="block px-3 py-2 text-black hover:text-accent font-medium"
+            >Logout</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="bg-black min-h-screen text-white py-8 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-2">
+          Jadwal <span class="text-accent">Konseling Karir</span>
+        </h1>
+        <p class="text-center text-gray-300 mb-8">
+          Pilih konselor dan jadwal yang tersedia untuk sesi konseling karir
+          Anda
+        </p>
+
+        <!-- Konselor Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Konselor 1 -->
+          <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <img
+                  src="https://randomuser.me/api/portraits/women/44.jpg"
+                  alt="Konselor 1"
+                  class="w-16 h-16 rounded-full object-cover border-2 border-accent" />
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold">Dr. Siti Rahayu, M.Psi</h3>
+                  <p class="text-gray-400">Psikolog Karir</p>
+                </div>
+              </div>
+              <p class="text-gray-300 mb-4">
+                Spesialisasi dalam pengembangan karir untuk mahasiswa teknik
+                dengan pengalaman 10 tahun di industri.
+              </p>
+              <div class="mb-4">
+                <h4 class="font-semibold text-accent mb-2">Jadwal Tersedia:</h4>
+                <div class="space-y-2">
+                  <div class="flex items-center">
+                    <i class="fas fa-calendar-day text-accent mr-2"></i>
+                    <span>Senin & Rabu</span>
+                  </div>
+                  <div class="flex items-center">
+                    <i class="fas fa-clock text-accent mr-2"></i>
+                    <span>08.00 - 11.00 WIB</span>
+                  </div>
+                </div>
+              </div>
+              <button
+                id="btn-siti"
+                onclick="joinGmeet('Dr. Siti Rahayu, M.Psi', 'Senin,Rabu', '08:00', '11:00')"
+                class="w-full bg-accent hover:bg-orange-700 text-white font-bold py-2 px-4 rounded transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                Mengikuti GMeet
+              </button>
+            </div>
+          </div>
+
+          <!-- Konselor 2 -->
+          <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  alt="Konselor 2"
+                  class="w-16 h-16 rounded-full object-cover border-2 border-accent" />
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold">Dr. Ahmad Fauzi, M.Si</h3>
+                  <p class="text-gray-400">Konselor Karir</p>
+                </div>
+              </div>
+              <p class="text-gray-300 mb-4">
+                Ahli dalam transisi karir dari akademik ke profesional dengan
+                fokus pada industri kreatif dan digital.
+              </p>
+              <div class="mb-4">
+                <h4 class="font-semibold text-accent mb-2">Jadwal Tersedia:</h4>
+                <div class="space-y-2">
+                  <div class="flex items-center">
+                    <i class="fas fa-calendar-day text-accent mr-2"></i>
+                    <span>Selasa & Kamis</span>
+                  </div>
+                  <div class="flex items-center">
+                    <i class="fas fa-clock text-accent mr-2"></i>
+                    <span>13.00 - 16.00 WIB</span>
+                  </div>
+                </div>
+              </div>
+              <button
+                id="btn-fauzi"
+                onclick="joinGmeet('Dr. Ahmad Fauzi, M.Si', 'Selasa,Kamis', '13:00', '16:00')"
+                class="w-full bg-accent hover:bg-orange-700 text-white font-bold py-2 px-4 rounded transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                Mengikuti GMeet
+              </button>
+            </div>
+          </div>
+
+          <!-- Konselor 3 -->
+          <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <img
+                  src="https://randomuser.me/api/portraits/women/68.jpg"
+                  alt="Konselor 3"
+                  class="w-16 h-16 rounded-full object-cover border-2 border-accent" />
+                <div class="ml-4">
+                  <h3 class="text-xl font-bold">Dewi Kartika, M.Psi</h3>
+                  <p class="text-gray-400">Psikolog Industri</p>
+                </div>
+              </div>
+              <p class="text-gray-300 mb-4">
+                Berpengalaman membantu mahasiswa menemukan passion dan
+                mengembangkan rencana karir jangka panjang.
+              </p>
+              <div class="mb-4">
+                <h4 class="font-semibold text-accent mb-2">Jadwal Tersedia:</h4>
+                <div class="space-y-2">
+                  <div class="flex items-center">
+                    <i class="fas fa-calendar-day text-accent mr-2"></i>
+                    <span>Jumat & Sabtu</span>
+                  </div>
+                  <div class="flex items-center">
+                    <i class="fas fa-clock text-accent mr-2"></i>
+                    <span>09.00 - 22.00 WIB</span>
+                  </div>
+                </div>
+              </div>
+              <button
+                id="btn-dewi"
+                onclick="joinGmeet('Dewi Kartika, M.Psi', 'Jumat,Sabtu', '09:00', '22:00')"
+                class="w-full bg-accent hover:bg-orange-700 text-white font-bold py-2 px-4 rounded transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                Mengikuti GMeet
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black">
+      <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+        <div class="flex justify-center text-teal-600">
+          <i class="fas fa-graduation-cap text-2xl text-accent mr-2"></i>
+          <span class="text-xl font-bold text-light">Kresna</span
+          ><span class="text-xl font-bold text-accent">Career</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Toggle menu
+      const mobileMenuButton = document.querySelector(".mobile-menu-button");
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Function to handle counselor selection
+
+      function joinGmeet(counselorName, allowedDays, startTime, endTime) {
+        const now = new Date();
+        const day = now.toLocaleDateString("id-ID", { weekday: "long" }); // misalnya: "Senin"
+        const currentTime = now.getHours() + now.getMinutes() / 60;
+
+        const startParts = startTime.split(":");
+        const endParts = endTime.split(":");
+        const startHour =
+          parseInt(startParts[0]) + parseInt(startParts[1]) / 60;
+        const endHour = parseInt(endParts[0]) + parseInt(endParts[1]) / 60;
+
+        const allowedDayArray = allowedDays.split(",");
+
+        if (
+          allowedDayArray.includes(day) &&
+          currentTime >= startHour &&
+          currentTime <= endHour
+        ) {
+          alert("Mengalihkan ke Google Meet...");
+          // Ganti dengan link GMeet konselor sesuai nama
+          const gmeetLinks = {
+            "Dr. Siti Rahayu, M.Psi": "https://meet.google.com/siti-link",
+            "Dr. Ahmad Fauzi, M.Si": "https://meet.google.com/fauzi-link",
+            "Dewi Kartika, M.Psi": "https://meet.google.com/dewi-link",
+          };
+          window.open(gmeetLinks[counselorName], "_blank");
+        } else {
+          alert(
+            "Belum waktunya mengikuti sesi. Silakan tunggu sampai jadwal dimulai."
+          );
+        }
+      }
+
+      function checkButtonAvailability() {
+        const now = new Date();
+        const day = now.toLocaleDateString("id-ID", { weekday: "long" });
+        const currentTime = now.getHours() + now.getMinutes() / 60;
+
+        const sessions = [
+          {
+            id: "btn-siti",
+            days: ["Senin", "Rabu"],
+            start: 8,
+            end: 11,
+          },
+          {
+            id: "btn-fauzi",
+            days: ["Selasa", "Kamis"],
+            start: 8,
+            end: 16,
+          },
+          {
+            id: "btn-dewi",
+            days: ["Jumat", "Sabtu"],
+            start: 9,
+            end: 22,
+          },
+        ];
+
+        sessions.forEach((session) => {
+          const btn = document.getElementById(session.id);
+          const isToday = session.days.includes(day);
+          const isNow =
+            currentTime >= session.start && currentTime <= session.end;
+
+          if (isToday && isNow) {
+            btn.disabled = false;
+            btn.innerText = "Mengikuti GMeet";
+          } else {
+            btn.disabled = true;
+            btn.innerText = "Diluar Jadwal";
+          }
+        });
+      }
+
+      // Jalankan pengecekan saat halaman dimuat dan setiap 1 menit
+      window.onload = checkButtonAvailability;
+      setInterval(checkButtonAvailability, 60000);
+    </script>
+  </body>
+</html>

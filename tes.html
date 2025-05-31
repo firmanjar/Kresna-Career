@@ -1,0 +1,141 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tes Minat Bakat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script> 
+     tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // kuning-500
+              primary: "#eab308",
+              //hijau-700
+              secondary: "#15803d",
+              //orange-500
+              accent: "#f97316",
+              // biru-700
+              dark: "#1d4ed8",
+              // white
+              light: "#ffffff",
+              // abu-abu-50
+              third: "#f9fafb",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+  </script>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white min-h-screen p-6">
+  <div class="max-w-4xl mx-auto bg-gray-800/90 backdrop-blur-md p-8 rounded-xl shadow-lg animate-fadeIn">
+    <h1 class="text-3xl font-bold text-center mb-6 text-white">Tes Minat Bakat <span class="accent">& Karir</span></h1>
+    <p class="text-center text-gray-300 mb-8">Jawablah pertanyaan berikut untuk mengetahui minat dan potensi karirmu.</p>
+
+    <form id="tesForm" class="space-y-6">
+      <!-- Soal akan dimuat dengan JavaScript -->
+    </form>
+
+    <div class="text-center mt-10">
+      <button type="submit" form="tesForm"
+        class="bg-accent hover:bg-orange-700 transition px-6 py-2 rounded-full text-white font-semibold shadow-lg">
+        Kirim Jawaban
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const soalTes = [
+      { pertanyaan: "Saya senang memecahkan masalah logika atau teka-teki.", bidang: "Logika" },
+      { pertanyaan: "Saya menikmati bekerja dengan angka dan data.", bidang: "Logika" },
+      { pertanyaan: "Saya tertarik memahami cara kerja sistem komputer.", bidang: "Teknik" },
+      { pertanyaan: "Saya suka merakit atau membongkar benda elektronik.", bidang: "Teknik" },
+      { pertanyaan: "Saya senang menggambar, melukis, atau mendesain sesuatu.", bidang: "Seni" },
+      { pertanyaan: "Saya suka membuat karya kreatif seperti fotografi atau video.", bidang: "Seni" },
+      { pertanyaan: "Saya bisa menyampaikan ide dengan baik secara tertulis.", bidang: "Bahasa" },
+      { pertanyaan: "Saya nyaman berbicara di depan banyak orang.", bidang: "Bahasa" },
+      { pertanyaan: "Saya suka membantu teman mengatasi masalah pribadinya.", bidang: "Sosial" },
+      { pertanyaan: "Saya tertarik dengan perilaku manusia dan psikologi.", bidang: "Sosial" },
+      { pertanyaan: "Saya suka bekerja dalam tim untuk mencapai tujuan.", bidang: "Manajemen" },
+      { pertanyaan: "Saya tertarik memimpin organisasi atau proyek.", bidang: "Manajemen" },
+      { pertanyaan: "Saya senang menganalisis data atau tren pasar.", bidang: "Logika" },
+      { pertanyaan: "Saya ingin menciptakan teknologi baru.", bidang: "Teknik" },
+      { pertanyaan: "Saya hobi menulis cerita, puisi, atau artikel.", bidang: "Bahasa" },
+      { pertanyaan: "Saya senang menjadi pendengar yang baik bagi orang lain.", bidang: "Sosial" },
+      { pertanyaan: "Saya memiliki ide-ide kreatif untuk produk atau kampanye.", bidang: "Seni" },
+      { pertanyaan: "Saya senang mengatur acara atau kegiatan kelompok.", bidang: "Manajemen" },
+      { pertanyaan: "Saya bisa berpikir kritis dan logis saat membuat keputusan.", bidang: "Logika" },
+      { pertanyaan: "Saya merasa tertantang dengan tantangan teknis atau ilmiah.", bidang: "Teknik" },
+    ];
+
+    const form = document.getElementById("tesForm");
+
+    soalTes.forEach((item, index) => {
+      const container = document.createElement("div");
+      container.classList.add("bg-gray-700", "p-4", "rounded", "shadow");
+
+      const label = document.createElement("label");
+      label.classList.add("block", "font-semibold", "mb-2");
+      label.textContent = `${index + 1}. ${item.pertanyaan}`;
+
+      const select = document.createElement("select");
+      select.name = `jawaban-${index}`;
+      select.dataset.bidang = item.bidang;
+      select.required = true;
+      select.classList.add("w-full", "p-2", "rounded", "text-black", "bg-white");
+      ["Sangat Tidak Setuju", "Tidak Setuju", "Netral", "Setuju", "Sangat Setuju"].forEach((opt, i) => {
+        const option = document.createElement("option");
+        option.value = i + 1; // skala 1–5
+        option.textContent = opt;
+        select.appendChild(option);
+      });
+
+      container.appendChild(label);
+      container.appendChild(select);
+      form.appendChild(container);
+    });
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const hasil = {};
+      let total = 0;
+
+      const inputs = form.querySelectorAll("select");
+      inputs.forEach(input => {
+        const bidang = input.dataset.bidang;
+        const nilai = parseInt(input.value);
+        hasil[bidang] = (hasil[bidang] || 0) + nilai;
+        total += nilai;
+      });
+
+      // Ambil bidang dengan nilai tertinggi
+      const bidangTeratas = Object.entries(hasil).sort((a, b) => b[1] - a[1])[0];
+      const hasilTes = bidangTeratas[0];
+      const nilaiTes = bidangTeratas[1];
+
+      const rekomendasiMap = {
+        Logika: "Analis Data, Programmer, Peneliti",
+        Teknik: "Teknik Mesin, Teknik Informatika, Teknik Elektro",
+        Seni: "Desainer Grafis, Animator, Seniman",
+        Bahasa: "Jurnalis, Penulis, Dosen Bahasa",
+        Sosial: "Psikolog, Pekerja Sosial, Guru BK",
+        Manajemen: "Manajer Proyek, HRD, Konsultan Bisnis",
+      };
+
+      localStorage.setItem("nilaiTes", nilaiTes);
+      localStorage.setItem("hasilTes", hasilTes);
+      localStorage.setItem("rekomendasiKarir", rekomendasiMap[hasilTes] || "Belum tersedia");
+
+      alert("Tes berhasil dikirim! Hasil akan muncul di dashboard.");
+      window.location.href = "dashboard.html";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bimbingan Konseling Karir Kampus | Layanan Karir Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // kuning-500
+              primary: "#eab308",
+              //hijau-700
+              secondary: "#15803d",
+              //orange-500
+              accent: "#f97316",
+              // biru-700
+              dark: "#1d4ed8",
+              // white
+              light: "#ffffff",
+              // abu-abu-50
+              third: "#f9fafb",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+   <body class="font-sans antialiased ">
+    
+          <!-- Navigation -->
+    <nav class="bg-black  bg-opacity-80 shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 flex items-center">
+              <i class="fas fa-graduation-cap text-2xl text-accent mr-2"></i>
+              <span class="text-xl font-bold text-light"
+                >Kresna</span><span class=" text-xl font-bold text-accent">Career</span></span
+              >
+            </div>
+          </div>
+          <div class="hidden md:flex items-center space-x-2">
+    
+            <a
+              href="tes.html"
+              class="text-light hover:bg-accent px-3 py-2 font-medium"
+              >Tes minat</a
+            >
+            <a
+              href="konseling.html"
+              class="text-light hover:bg-accent px-3 py-2 font-medium"
+              >Konseling</a
+            >
+            <a
+              href="index.html"
+              class="text-light hover:bg-accent px-3 py-2 font-medium"
+              >Logout</a
+            >
+          </div>
+          <div class="flex items-center md:hidden">
+            <button
+              class="mobile-menu-button p-2 rounded-md text-light hover:text-accent focus:outline-none">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="mobile-menu hidden md:hidden bg-light shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="tes.html"
+            class="block px-3 py-2 text-black hover:text-accent font-medium"
+            >Tes minat</a
+          >
+          <a
+            href="konseling.html"
+            class="block px-3 py-2 text-black hover:text-accent font-medium"
+            >Konseling</a
+          >
+           
+          <a
+            href="index.html"
+            class="block px-3 py-2 text-black hover:text-accent font-medium"
+            >Logout</a
+          >
+        </div>
+      </div>
+    </nav>
+
+     <!-- background -->
+    <div class="bg-black min-h-screen text-white py-2">
+
+    <!-- bagian timeline ini -->
+<div class="mt-6 px-4">
+  <div class="flex justify-between items-center w-full max-w-full">
+    <!-- STEP 1 -->
+    <div class="flex flex-col items-center text-center flex-1">
+      <div id="step1" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-900 border-4 border-gray-500 flex items-center justify-center text-white font-bold text-sm sm:text-base">
+        1
+      </div>
+      <span class="mt-1 text-xs sm:text-sm text-gray-400">Isi profil</span>
+    </div>
+
+    <div id="line1" class="h-1 bg-gray-500 flex-1 mx-1 sm:mx-2"></div>
+
+    <!-- STEP 2 -->
+    <div class="flex flex-col items-center text-center flex-1">
+      <div id="step2" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-900 border-4 border-gray-500 flex items-center justify-center text-white font-bold text-sm sm:text-base">
+        2
+      </div>
+      <span class="mt-1 text-xs sm:text-sm text-gray-400">Tes minat</span>
+    </div>
+
+    <div id="line2" class="h-1 bg-gray-500 flex-1 mx-1 sm:mx-2"></div>
+
+    <!-- STEP 3 -->
+    <div class="flex flex-col items-center text-center flex-1">
+      <div id="step3" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-900 border-4 border-gray-500 flex items-center justify-center text-white font-bold text-sm sm:text-base">
+        3
+      </div>
+      <span class="mt-1 text-xs sm:text-sm text-gray-400">konseling</span>
+    </div>
+  </div>
+</div>
+
+
+  <!-- dashboard section -->
+  <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 mx-auto mt-6 px-4">
+  <!-- Kolom 1: Profil -->
+  <div class="rounded bg-gray-900 flex flex-col p-4 lg:col-span-1">
+    <div class="flex flex-col items-center">
+      <!-- Foto Profil -->   
+<label id="photo-label" class="relative w-32 h-32 mb-4 cursor-pointer group pointer-events-none">
+  <img id="profile-photo" src="https://via.placeholder.com/150" alt="Foto Profil" class="w-full h-full rounded-full object-cover border-2 border-white shadow-md">
+  <input type="file" id="photo-upload" class="hidden" accept="image/*">
+  <div class="absolute inset-0 bg-black bg-opacity-50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+    <span class="text-white text-sm">Ubah Foto</span>
+  </div>
+</label>
+
+
+      <!-- Info Profil -->
+      <div class="w-full">
+        <div class="mb-2">
+          <label class="block text-light font-bold">Nama :</label>
+          <input type="text" id="nama" class="w-full p-2 rounded text-light bg-black" readonly>
+        </div>
+        <div class="mb-2">
+          <label class="block text-light font-bold">NPM :</label>
+          <input type="text" id="npm" class="w-full p-2 rounded text-light bg-black" readonly>
+        </div>
+        <div class="mb-2">
+          <label class="block text-light font-bold">Email :</label>
+          <input type="text" id="email" class="w-full p-2 rounded text-light bg-black" readonly>
+        </div>
+       <div class="mb-2">
+  <label class="block text-light font-bold">Fakultas :</label>
+
+  <!-- Tampilan read-only -->
+  <input type="text" id="fakultasDisplay" class="w-full p-2 rounded bg-black" readonly>
+
+  <!-- saat mode edit -->
+   <!-- fakultas -->
+  <select id="fakultasSelect" class="w-full p-2 rounded bg-black hidden">
+    <option value="">Pilih Fakultas</option>
+    <option value="Fakultas Ilmu Komputer">Fakultas Ilmu Komputer</option>
+    <option value="Fakultas Hukum">Fakultas Hukum</option>
+    <option value="Fakultas Ekonomi">Fakultas Ekonomi</option>
+    <option value="Fakultas Teknik">Fakultas Teknik</option>
+    <option value="Fakultas Psikologi">Fakultas Psikologi</option>
+  </select>
+</div>
+<!-- status -->
+    <div class="mb-4">
+  <label class="block text-light font-bold">Status :</label>
+
+  <!-- Tampilan read-only -->
+  <input type="text" id="statusDisplay" class="w-full p-2 rounded bg-black" readonly>
+
+  <!-- saat edit -->
+  <select id="statusSelect" class="w-full p-2 rounded bg-black hidden">
+    <option value="">Pilih Status</option>
+    <option value="Aktif">Aktif</option>
+    <option value="Alumni">Alumni</option>
+  </select>
+</div>
+
+
+
+        <!-- Tombol -->
+        <div class="flex justify-end gap-2">
+          <button id="editBtn" class="px-4 py-2 bg-accent hover:bg-orange-800 text-white rounded">Edit</button>
+          <button id="saveBtn" class="px-4 py-2 bg-green-600 text-white rounded hidden">Simpan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kolom 2 -->
+  <div class="rounded bg-gray-900 lg:col-span-2 p-4 flex flex-col">
+    <!-- hasil tes minat bakat dan rekomendasi karir --> 
+    <h2 class="text-xl font-bold text-center mb-4 text-light">Hasil Tes Minat Bakat <span class="text-accent">& Rekomendasi Karir</span></h2>
+
+<div class="space-y-4">
+  <div>
+    <label class="block text-accent font-semibold">Nilai Tes Minat Bakat</label>
+    <input type="text" id="nilaiTes" class="w-full p-2 rounded bg-black" readonly />
+  </div>
+
+  <div>
+    <label class="block text-accent font-semibold">Hasil Tes Minat Bakat</label>
+    <input type="text" id="hasilTes" class="w-full p-2 rounded bg-black"  readonly></textarea>
+  </div>
+
+  <div>
+    <label class="block text-accent font-semibold">Rekomendasi Karir</label>
+    <input type="text" id="rekomendasiKarir" class="w-full p-2 rounded bg-black" rows="3" readonly></textarea>
+  </div>
+
+  
+ <!-- Riwayat Konseling -->
+<div class="mt-6">
+  <h2 class="text-xl font-bold text-center mb-4 text-light">Riwayat <span class="text-accent">Konseling</span></h2>
+
+  <div class="overflow-x-auto rounded-lg shadow border border-accent">
+    <table class="min-w-full text-sm text-white bg-black/70 border-collapse">
+      <thead class="bg-accent text-black">
+        <tr>
+          <th class="px-4 py-2 border-b">No</th>
+          <th class="px-4 py-2 border-b">Pembimbing</th>
+          <th class="px-4 py-2 border-b">Tanggal</th>
+          <th class="px-4 py-2 border-b">Waktu</th>
+        </tr>
+      </thead>
+      <tbody id="riwayatKonselingBody"></tbody>
+    </table>
+  </div>
+
+  <!-- Tombol Reset -->
+  <div class="text-right mt-4">
+    <button onclick="resetRiwayat()" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded text-white">
+      Reset Riwayat
+    </button>
+  </div>
+</div>
+
+  </div>
+  </div>
+  </div>
+  </div>
+
+   <!--footer  -->
+   <footer class="bg-black">
+  <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+    <div class="flex justify-center text-teal-600">
+      <i class="fas fa-graduation-cap text-2xl text-accent mr-2"></i>
+      <span class="text-xl font-bold text-light"
+      >Kresna</span><span class=" text-xl font-bold text-accent"> Career</span></span> 
+    </div>
+  </div>
+</footer>
+
+   <script>
+  // Toggle menu
+  const mobileMenuButton = document.querySelector(".mobile-menu-button");
+  const mobileMenu = document.querySelector(".mobile-menu");
+
+  mobileMenuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  // Fungsi untuk menampilkan RIWAYAT konseling
+  function tampilkanRiwayatKonseling() {
+    const body = document.getElementById("riwayatKonselingBody");
+    body.innerHTML = "";
+    const data = JSON.parse(localStorage.getItem("riwayatKonseling")) || [];
+
+    if (data.length === 0) {
+      body.innerHTML = `
+        <tr>
+          <td colspan="4" class="px-4 py-4 text-center text-gray-400">
+            Belum ada riwayat konseling.
+          </td>
+        </tr>`;
+      return;
+    }
+
+    data.forEach((item, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td class="px-4 py-2 border-b border-gray-700 text-center">${index + 1}</td>
+        <td class="px-4 py-2 border-b border-gray-700">${item.nama}</td>
+        <td class="px-4 py-2 border-b border-gray-700 text-center">${item.tanggal}</td>
+        <td class="px-4 py-2 border-b border-gray-700 text-center">${item.jam}</td>
+      `;
+      body.appendChild(row);
+    });
+  }
+
+  // Fungsi reset data
+  function resetRiwayat() {
+    if (confirm("Yakin ingin menghapus semua riwayat konseling?")) {
+      localStorage.removeItem("riwayatKonseling");
+      tampilkanRiwayatKonseling();
+    }
+  }
+
+  // Fungsi untuk mengupdate timeline
+  function updateTimeline() {
+    // time line pada profil akan diambil dari sini
+    const fakultas = localStorage.getItem("fakultas");
+    const status = localStorage.getItem("status");
+    const profileComplete = fakultas && status;
+
+    // timeline pada tes minat akan diambil disini
+    const nilaiTes = localStorage.getItem("nilaiTes");
+    const tesComplete = nilaiTes && nilaiTes !== "Belum tersedia";
+
+    // timeline pada riwayat konseling akan diambil dari sini
+    const riwayatData = JSON.parse(localStorage.getItem("riwayatKonseling")) || [];
+    const konselingComplete = riwayatData.length > 0;
+
+    if (profileComplete) {
+      document.getElementById("step1").classList.replace("border-gray-500", "border-accent");
+      document.querySelector("#step1 + span").classList.replace("text-gray-400", "text-white");
+      document.getElementById("line1").classList.replace("bg-gray-500", "bg-accent");
+    }
+
+    if (tesComplete) {
+      document.getElementById("step2").classList.replace("border-gray-500", "border-accent");
+      document.querySelector("#step2 + span").classList.replace("text-gray-400", "text-white");
+      document.getElementById("line2").classList.replace("bg-gray-500", "bg-accent");
+    }
+
+    if (konselingComplete) {
+      document.getElementById("step3").classList.replace("border-gray-500", "border-accent");
+      document.querySelector("#step3 + span").classList.replace("text-gray-400", "text-white");
+    }
+  }
+
+  // Saat halaman dimuat
+  window.onload = function () {
+    const fakultas = localStorage.getItem("fakultas") || "";
+    const status = localStorage.getItem("status") || "";
+    const photo = localStorage.getItem("photo");
+
+    document.getElementById("fakultasDisplay").value = fakultas;
+    document.getElementById("statusDisplay").value = status;
+
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+      document.getElementById("nama").value = user.name || "Nama Mahasiswa";
+      document.getElementById("npm").value = user.npm || "000000000000";
+      document.getElementById("email").value = user.email || "email@example.com";
+    }
+
+    if (photo) {
+      document.getElementById("profile-photo").src = photo;
+    }
+
+    document.getElementById("nilaiTes").value = localStorage.getItem("nilaiTes") || "Belum tersedia";
+    document.getElementById("hasilTes").value = localStorage.getItem("hasilTes") || "Belum mengikuti tes minat bakat.";
+    document.getElementById("rekomendasiKarir").value = localStorage.getItem("rekomendasiKarir") || "Belum ada rekomendasi.";
+
+    // Panggil fungsi riwayat
+    tampilkanRiwayatKonseling();
+    updateTimeline();
+  };
+
+  // Tombol Edit
+  document.getElementById("editBtn").onclick = function () {
+    document.getElementById("fakultasDisplay").classList.add("hidden");
+    document.getElementById("fakultasSelect").classList.remove("hidden");
+
+    document.getElementById("statusDisplay").classList.add("hidden");
+    document.getElementById("statusSelect").classList.remove("hidden");
+
+    document.getElementById("fakultasSelect").value = localStorage.getItem("fakultas") || "";
+    document.getElementById("statusSelect").value = localStorage.getItem("status") || "";
+
+    document.getElementById("photo-label").classList.remove("pointer-events-none");
+
+    this.classList.add("hidden");
+    document.getElementById("saveBtn").classList.remove("hidden");
+  };
+
+  // Tombol Simpan
+  document.getElementById("saveBtn").onclick = function () {
+    const fakultas = document.getElementById("fakultasSelect").value;
+    const status = document.getElementById("statusSelect").value;
+
+    localStorage.setItem("fakultas", fakultas);
+    localStorage.setItem("status", status);
+
+    document.getElementById("fakultasDisplay").value = fakultas;
+    document.getElementById("statusDisplay").value = status;
+
+    document.getElementById("fakultasDisplay").classList.remove("hidden");
+    document.getElementById("fakultasSelect").classList.add("hidden");
+
+    document.getElementById("statusDisplay").classList.remove("hidden");
+    document.getElementById("statusSelect").classList.add("hidden");
+
+    document.getElementById("photo-label").classList.add("pointer-events-none");
+
+    this.classList.add("hidden");
+    document.getElementById("editBtn").classList.remove("hidden");
+
+    updateTimeline();
+  };
+
+  // Upload Foto Profil
+  document.getElementById("photo-upload").onchange = function (e) {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (evt) {
+        const dataUrl = evt.target.result;
+        document.getElementById("profile-photo").src = dataUrl;
+        localStorage.setItem("photo", dataUrl);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+</script>
+
+   </body>
+</html>
+  

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bimbingan Konseling Karir Kampus | Layanan Karir Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // kuning-500
+              primary: "#eab308",
+              //hijau-700
+              secondary: "#15803d",
+              //orange-500
+              accent: "#f97316",
+              // biru-700
+              dark: "#1d4ed8",
+              // white
+              light: "#ffffff",
+              // abu-abu-50
+              third: "#f9fafb",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-black bg-opacity-80 shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16"> 
+          <div class="flex items-center">
+            <div class="flex-shrink-0 flex items-center">
+              <i class="fas fa-graduation-cap text-2xl text-accent mr-2"></i>
+              <span class="text-xl font-bold text-light"
+                >Kresna</span><span class=" text-xl font-bold text-accent">Career</span></span
+              >
+            </div>
+          </div>
+          <div class="hidden md:flex items-center space-x-2">
+            <a
+              href="#home"
+              class="text-light hover:bg-accent px-3 py-2 font-medium"
+              >Beranda</a
+            >
+            <a
+              href="#about"
+              class="text-light hover:bg-accent px-3 py-2 font-medium"
+              >Tentang Kami</a
+            >
+            <a
+              href="#testimonials"
+              class="text-light hover:bg-accent px-3 py-2 font-medium"
+              >Testimoni</a
+            >
+            <a
+              href="#contact"
+              class="text-light hover:bg-accent px-3 py-2 font-medium"
+              >Kontak</a
+            >
+          </div>
+          <div class="flex items-center md:hidden">
+            <button
+              class="mobile-menu-button p-2 rounded-md text-light hover:text-accent focus:outline-none">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="mobile-menu hidden md:hidden bg-light shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="block px-3 py-2 text-black hover:bg-accent font-medium"
+            >Beranda</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 text-black hover:bg-accent font-medium"
+            >Tentang Kami</a
+          >
+          <a
+            href="#testimonials"
+            class="block px-3 py-2 text-black hover:bg-accent font-medium"
+            >Testimoni</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 text-black hover:bg-accent font-medium"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-black py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight text-accent">
+              <span class="text-light">Bimbingan Konseling</span><br />
+              Karir Kampus
+            </h1>
+            <p class="text-lg text-light">
+              Temukan potensi terbaikmu dan raih karir impian dengan bimbingan
+              dari konselor karir profesional kami.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="login.html"
+                class="bg-light px-6 py-3 rounded-lg font-semibold text-accent border border-gray-200 hover:bg-accent hover:text-light transition-all duration-300 shadow-lg">
+                Masuk
+                 
+              </a>
+              <a
+                href="register.html"
+                class="bg-light px-6 py-3 rounded-lg font-semibold text-accent border border-gray-200 hover:bg-accent hover:text-light transition-all duration-300 shadow-lg">
+                 Daftar
+              </a>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+              alt="Career Counseling"
+              class="rounded-xl shadow-2xl border-8 border-light transform rotate-2 hover:rotate-0 transition-transform duration-500" />
+            <div
+              class="absolute -bottom-6 -left-3 bg-gray-900 p-4 rounded-lg shadow-lg border border-gray-900">
+              <div class="flex items-center">
+                <div class=" p-3 rounded-full">
+                  <i class="fas fa-user-tie text-accent text-xl"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm font-semibold text-accent">Konselor</p>
+                  <p class="text-xs text-light">Profesional Berpengalaman</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute -top-6 -right-3 bg-gray-900 p-4 rounded-lg shadow-lg border border-gray-900">
+              <div class="flex items-center">
+                <div class="p-3 rounded-full">
+                  <i class="fas fa-graduation-cap text-accent text-xl"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm font-semibold text-accent">10.000+ Alumni</p>
+                  <p class="text-xs text-light">Sukses Berkarir</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+              alt="About Us"
+              class="rounded-xl shadow-2xl border-8 border-light" />
+             
+          </div>
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-light mb-6">
+              Tentang <span class="text-accent">Kresna Career</span>
+            </h2>
+            <p class="text-light mb-6">
+              Layanan Bimbingan Konseling Karir Kampus telah membantu ribuan
+              mahasiswa dan alumni dalam merencanakan dan mengembangkan karir
+              mereka sejak 2008. Kami bangga menjadi mitra terpercaya dalam
+              perjalanan karir Anda.
+            </p>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start">
+                <div class="bg-gray-900 p-2 rounded-full mr-4">
+                  <i class="fas fa-check text-light"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-accent mb-1">
+                    Pendekatan Personal
+                  </h4>
+                  <p class="text-light">
+                    Setiap klien mendapatkan perhatian dan solusi yang
+                    disesuaikan dengan kebutuhan unik mereka.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-gray-900 p-2 rounded-full mr-4">
+                  <i class="fas fa-check text-light"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-accent mb-1">
+                    Konselor Berpengalaman
+                  </h4>
+                  <p class="text-light">
+                    Tim kami terdiri dari profesional dengan pengalaman luas di
+                    berbagai industri.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-gray-900 p-2 rounded-full mr-4">
+                  <i class="fas fa-check text-light"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-accent mb-1">Jaringan Luas</h4>
+                  <p class="text-light">
+                    membantu Anda
+                    mendapatkan peluang terbaik.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="#"
+              class="btn-gradient px-6 py-3 rounded-lg font-semibold shadow-lg inline-flex items-center">
+              <i class="fas fa-book-open mr-2"></i> Pelajari Lebih Lanjut
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section
+      id="testimonials"
+      class="py-20 bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-light mb-4">
+            Apa Kata Mereka
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "Bimbingan karir ini sangat membantu saya menemukan arah setelah
+              lulus. Konselor sangat profesional dan memahami kebutuhan saya."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="img/foto firman tentara.jpeg"
+                alt="Testimonial"
+                class="w-12 h-12 rounded-full mr-4" />
+              <div>
+                <h4 class="font-semibold text-dark">Serda man</h4>
+                <p class="text-sm text-gray-500">
+                  Alumni Teknik Informatika, Tentara nasional indonesia
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "Berkat web ini, saya
+              bisa percaya diri dan diterima di perusahaan
+              impian."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="img/foto yuni.jpeg"
+                alt="Testimonial"
+                class="w-12 h-12 rounded-full mr-4" />
+              <div>
+                <h4 class="font-semibold text-dark">Yuniarti</h4>
+                <p class="text-sm text-gray-500">
+                  Mahasiswa Ekonomi, Intern di Bank Central Asia
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "CV yang disusun oleh tim ini membuat saya mendapatkan 5 panggilan
+              wawancara dalam 2 minggu! Sangat direkomendasikan."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Testimonial"
+                class="w-12 h-12 rounded-full mr-4" />
+              <div>
+                <h4 class="font-semibold text-dark">Siti Aisyah</h4>
+                <p class="text-sm text-gray-500">
+                  Alumni Psikologi, sekarang di Unilever
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div>
+            <h2 class="text-3xl md:text-4xl text-center font-bold text-accent mb-6">
+              Hubungi <span class="text-light">Kami</span>
+            </h2>
+            <p class="text-light text-center mb-8">
+              Untuk informasi lebih lanjut. Silahkan
+              hubungi kami langsung melalui kontak di bawah ini.
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="bg-gray-900 p-3 rounded-full mr-4">
+                  <i class="fas fa-map-marker-alt text-light"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-accent mb-1">Alamat</h4>
+                  <p class="text-light">
+                    Gedung Student Center Lt. 3, Kampus Universitas Kita, Jl.
+                    Pendidikan No. 123, Kota Akademik
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-gray-900 p-3 rounded-full mr-4">
+                  <i class="fas fa-phone-alt text-light"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-accent mb-1">Telepon</h4>
+                  <p class="text-light">(021) 1234-5678</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-gray-900 p-3 rounded-full mr-4">
+                  <i class="fas fa-envelope text-light"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-accent mb-1">Email</h4>
+                  <p class="text-light">bkk@universitaskita.ac.id</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-gray-900  p-3 rounded-full mr-4">
+                  <i class="fas fa-clock text-light"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-accent mb-1">Jam Operasional</h4>
+                  <p class="text-light">
+                    Senin-Jumat: 08.00-16.00 WIB<br />Sabtu: 08.00-12.00 WIB
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+ <!-- Footer -->
+<footer class="bg-black text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center mb-4">
+          <i class="fas fa-graduation-cap text-2xl text-accent mr-2"></i>
+          <span class="text-xl font-bold">
+            Kresna<span class="text-accent">Career</span>
+          </span>
+        </div>
+        <p class="text-gray-400 mb-4">
+          Layanan Bimbingan Konseling Karir profesional untuk mahasiswa dan alumni.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tautan Cepat -->
+      <div>
+        <h3 class="text-lg text-accent font-semibold mb-4">Tautan Cepat</h3>
+        <ul class="space-y-2">
+          <li><a href="#home" class="text-gray-400 hover:text-accent transition">Beranda</a></li>
+          <li><a href="#about" class="text-gray-400 hover:text-accent transition">Tentang Kami</a></li>
+          <li><a href="#testimonials" class="text-gray-400 hover:text-accent transition">Testimoni</a></li>
+          <li><a href="#contact" class="text-gray-400 hover:text-accent transition">Kontak</a></li>
+        </ul>
+      </div>
+
+      <!-- Layanan -->
+      <div>
+        <h3 class="text-lg text-accent font-semibold mb-4">Layanan</h3>
+        <div class="space-y-2">
+          <p class="text-gray-400">Tes Minat & Bakat</p>
+          <p class="text-gray-400">Rekomendasi karir</p>
+          <p class="text-gray-400">Konseling Karir</p>
+        </div>
+      </div>
+
+      <!-- Sponsor -->
+      <div>
+        <h3 class="text-lg text-center text-accent font-semibold mb-4">Sponsor<span class="text-accent"> kami</span></h3>
+<div class="text-sm text-center text-gray-400 font-semibold mb-4"> Web ini dibangun atas kerjasama </div>
+        <div class="grid grid-cols-3 gap-4 items-center">
+          <img src="img/fasilkom_logo.png" alt="Sponsor A" class="object-contain h-10 w-full grayscale hover:grayscale-0 transition" />
+          <img src="img/Logo_ubhara.png" alt="Sponsor B" class="object-contain h-10 w-full grayscale hover:grayscale-0 transition" />
+          <img src="img/logo_psikologi.png" alt="Sponsor C" class="object-contain h-10 w-full grayscale hover:grayscale-0 transition" />
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12 pt-8 text-gray-400 border-t border-gray-800">
+      <p>&copy; 2023 Bimbingan Konseling Karir Kampus. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.querySelector(".mobile-menu-button");
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+
+          // Close mobile menu if open
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
